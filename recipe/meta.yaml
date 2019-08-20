@@ -1,6 +1,6 @@
 {% set dataset_name = "PARTICLEXS" %}
 {% set version = "2.1" %}
-{% set sha256 = "93e45d888165a0cf23f95bdc5b5143f2898136ec61f028bf43641658ec4b3f42" %}
+{% set sha256 = "185bc60de3d4000e52a9e993500955ae73e0615e841b8913b469433e5df2d501" %}
 {% set env_var = "G4PARTICLEXSDATA" %}
 {% set summary = "GEANT4 data files for evaluated particle cross-sections on natural composition of elements" %}
 
