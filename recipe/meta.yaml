@@ -1,23 +1,24 @@
 {% set dataset_name = "PARTICLEXS" %}
-{% set version = "4.0" %}
-{% set sha256 = "9381039703c3f2b0fd36ab4999362a2c8b4ff9080c322f90b4e319281133ca95" %}
+{% set version = "4.1.0" %}
+{% set version_canonical_geant4 = "4.1" %}
+{% set sha256 = "07ae1e048e9ac8e7f91f6696497dd55bd50ccc822d97af1a0b9e923212a6d7d1" %}
 {% set env_var = "G4PARTICLEXSDATA" %}
 {% set summary = "GEANT4 data files for evaluated particle cross-sections on natural composition of elements" %}
 
 {% set name = "geant4-data-"+dataset_name.lower() %}
-{% set install_dir = "share/Geant4/data/"+dataset_name+version %}
+{% set install_dir = "share/Geant4/data/"+dataset_name+version_canonical_geant4 %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://geant4-data.web.cern.ch/geant4-data/datasets/G4{{ dataset_name }}.{{ version }}.tar.gz
+  url: https://geant4-data.web.cern.ch/geant4-data/datasets/G4{{ dataset_name }}.{{ version_canonical_geant4 }}.tar.gz
   sha256: {{ sha256 }}
   folder: dataset
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   script:
     - mkdir -p ${PREFIX}/{{ install_dir }}
